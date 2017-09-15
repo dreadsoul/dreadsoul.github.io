@@ -16,9 +16,7 @@ $.getJSON('data.json', function (data) {
     // Create the chart
     Highcharts.stockChart('container', {
         credits: { 
-	    'enabled': 'false',
-	     text: 'you text',
-	     href: false,
+	    'enabled': 'false'
 	},
 	chart: {
             events: {
@@ -95,6 +93,9 @@ $.getJSON('data.json', function (data) {
 		<script type="text/javascript">
 
 Highcharts.chart('container_1', {
+    credits: { 
+	'enabled': 'false'
+	},
     chart: {
         type: 'pie',
         options3d: {
@@ -103,9 +104,6 @@ Highcharts.chart('container_1', {
             beta: 0
         }
     },
-    credits: { 
-		'enabled': 'false' 
-	},
     title: {
         text: 'Parameters of Decision Supper System, 2017'
     },
