@@ -1,5 +1,5 @@
 
-# Visualization of Forecasting, Machine Learning and Decision Support Algorithms 
+# Visualization of Forecasting, Machine Learning and Decision Support System Algorithms 
 
 ### Disclaimer
 
