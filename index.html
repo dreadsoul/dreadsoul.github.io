@@ -15,7 +15,10 @@ $.getJSON('data.json', function (data) {
 
     // Create the chart
     Highcharts.stockChart('container', {
-        chart: {
+        credits: { 
+		'enabled': 'false' 
+	},
+	chart: {
             events: {
                 load: function () {
                     this.setTitle(null, {
@@ -26,11 +29,7 @@ $.getJSON('data.json', function (data) {
             zoomType: 'x'
         },
 	
-	credits: { 
-		'enabled': 'false' 
-	},
-
-        rangeSelector: {
+	rangeSelector: {
 
             buttons: [{
                 type: 'day',
