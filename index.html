@@ -1,0 +1,140 @@
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+
+<div id="container" style="height: 400px; width: 800px; float: right">
+
+
+		<script type="text/javascript">
+
+
+// $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=large-dataset.json&callback=?', function (data) {
+$.getJSON('data.json', function (data) {
+
+    // Create a timer
+    var start = +new Date();
+
+    // Create the chart
+    Highcharts.stockChart('container', {
+        chart: {
+            events: {
+                load: function () {
+                    this.setTitle(null, {
+                        //text: 'Built chart in ' + (new Date() - start) + 'ms'
+                    });
+                }
+            },
+            zoomType: 'x'
+        },
+
+        rangeSelector: {
+
+            buttons: [{
+                type: 'day',
+                count: 3,
+                text: '3d'
+            }, {
+                type: 'week',
+                count: 1,
+                text: '1w'
+            }, {
+                type: 'month',
+                count: 1,
+                text: '1m'
+            }, {
+                type: 'month',
+                count: 6,
+                text: '6m'
+            }, {
+                type: 'year',
+                count: 1,
+                text: '1y'
+            }, {
+                type: 'all',
+                text: 'All'
+            }],
+            selected: 3
+        },
+
+        yAxis: {
+            title: {
+                text: 'Temperature (°C)'
+            }
+        },
+
+        title: {
+            text: 'Hourly temperatures in Region, city, 2009-2015'
+        },
+
+        subtitle: {
+            text: 'Built chart in ... by ...' // dummy text to reserve space for dynamic subtitle
+        },
+
+        series: [{
+            name: 'Temperature',
+            data: data.data,
+            pointStart: data.pointStart,
+            pointInterval: data.pointInterval,
+            tooltip: {
+                valueDecimals: 1,
+                valueSuffix: '°C'
+            }
+        }]
+
+    });
+});
+
+		</script>
+		</div>
+
+<div id="container_1" style="height: 400px; width: 800px"></div>
+
+
+		<script type="text/javascript">
+
+Highcharts.chart('container_1', {
+    chart: {
+        type: 'pie',
+        options3d: {
+            enabled: true,
+            alpha: 45,
+            beta: 0
+        }
+    },
+    title: {
+        text: 'Browser market shares at a specific website, 2014'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            depth: 35,
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}'
+            }
+        }
+    },
+    series: [{
+        type: 'pie',
+        name: 'Browser share',
+        data: [
+            ['Firefox', 45.0],
+            ['IE', 26.8],
+            {
+                name: 'Chrome',
+                y: 12.8,
+                sliced: true,
+                selected: true
+            },
+            ['Safari', 8.5],
+            ['Opera', 6.2],
+            ['Others', 0.7]
+        ]
+    }]
+});
+		</script>
