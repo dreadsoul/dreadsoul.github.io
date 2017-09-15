@@ -18,7 +18,9 @@ $.getJSON('data.json', function (data) {
     // Create the chart
     Highcharts.stockChart('container', {
 		credits: {
-			enabled: 'false'
+			enabled: 'false',
+			text: 'you text',
+			href: false,
 		},
         chart: {
             events: {
