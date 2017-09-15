@@ -109,7 +109,7 @@ Highcharts.chart('container_1', {
         }
     },
     title: {
-        text: 'Browser market shares at a specific website, 2014'
+        text: 'Decision Support Parameter Ratio, 2014'
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -127,18 +127,18 @@ Highcharts.chart('container_1', {
     },
     series: [{
         type: 'pie',
-        name: 'Browser share',
+        name: 'Parameter ratio',
         data: [
-            ['Firefox', 45.0],
-            ['IE', 26.8],
+            ['Forecast', 45.0],
+            ['ML Algorithm', 26.8],
             {
-                name: 'Chrome',
+                name: 'Temperature',
                 y: 12.8,
                 sliced: true,
                 selected: true
             },
-            ['Safari', 8.5],
-            ['Opera', 6.2],
+            ['Process States', 8.5],
+            ['Gas Demand', 6.2],
             ['Others', 0.7]
         ]
     }]
