@@ -7,7 +7,7 @@ The energy consumption data in this visualization is synthetic.
 
 ### Authors
 
-Dodo Eze
+Dodo Eze, 
 Master Student
 
 ### [Youtube video](https://youtube.com)
