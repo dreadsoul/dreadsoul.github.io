@@ -8,7 +8,6 @@
 
 		<script type="text/javascript">
 
-credits: { 'enabled': 'false' },
 $.getJSON('data.json', function (data) {
 
     // Create a timer
@@ -69,7 +68,9 @@ $.getJSON('data.json', function (data) {
         subtitle: {
             text: 'Built chart in ... by ...' // dummy text to reserve space for dynamic subtitle
         },
-
+	credits: { 
+		'enabled': 'false' 
+	},
         series: [{
             name: 'Temperature',
             data: data.data,
