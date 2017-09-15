@@ -8,6 +8,8 @@
 
 		<script type="text/javascript">
 
+
+// $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=large-dataset.json&callback=?', function (data) {
 $.getJSON('data.json', function (data) {
 
     // Create a timer
@@ -17,8 +19,8 @@ $.getJSON('data.json', function (data) {
     Highcharts.stockChart('container', {
 		credits: {
 			enabled: 'false'
-			},
-		chart: {
+		},
+        chart: {
             events: {
                 load: function () {
                     this.setTitle(null, {
@@ -28,8 +30,8 @@ $.getJSON('data.json', function (data) {
             },
             zoomType: 'x'
         },
-	
-	rangeSelector: {
+
+        rangeSelector: {
 
             buttons: [{
                 type: 'day',
@@ -71,7 +73,8 @@ $.getJSON('data.json', function (data) {
         subtitle: {
             text: 'Built chart in ... by ...' // dummy text to reserve space for dynamic subtitle
         },
-	series: [{
+
+        series: [{
             name: 'Temperature',
             data: data.data,
             pointStart: data.pointStart,
@@ -84,6 +87,7 @@ $.getJSON('data.json', function (data) {
 
     });
 });
+
 		</script>
 		</div>
 
@@ -93,7 +97,7 @@ $.getJSON('data.json', function (data) {
 		<script type="text/javascript">
 
 Highcharts.chart('container_1', {
-    credits: {
+	credits: {
 		enabled: 'false'
 	},
     chart: {
@@ -105,7 +109,7 @@ Highcharts.chart('container_1', {
         }
     },
     title: {
-        text: 'Parameters of Decision Supper System, 2017'
+        text: 'Browser market shares at a specific website, 2014'
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -123,18 +127,18 @@ Highcharts.chart('container_1', {
     },
     series: [{
         type: 'pie',
-        name: 'Dispatching parameter rate',
+        name: 'Browser share',
         data: [
-            ['Forecast', 45.0],
-            ['ML Algorithms', 26.8],
+            ['Firefox', 45.0],
+            ['IE', 26.8],
             {
-                name: 'Temperature',
+                name: 'Chrome',
                 y: 12.8,
                 sliced: true,
                 selected: true
             },
-            ['Process States', 8.5],
-            ['Controller', 6.2],
+            ['Safari', 8.5],
+            ['Opera', 6.2],
             ['Others', 0.7]
         ]
     }]
