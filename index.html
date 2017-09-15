@@ -15,10 +15,10 @@ $.getJSON('data.json', function (data) {
 
     // Create the chart
     Highcharts.stockChart('container', {
-        credits: { 
-	    'enabled': 'false'
-	},
-	chart: {
+		credits: {
+			'enabled': 'false'
+			},
+		chart: {
             events: {
                 load: function () {
                     this.setTitle(null, {
@@ -93,8 +93,8 @@ $.getJSON('data.json', function (data) {
 		<script type="text/javascript">
 
 Highcharts.chart('container_1', {
-    credits: { 
-	'enabled': 'false'
+    credits: {
+		'enabled': 'false'
 	},
     chart: {
         type: 'pie',
