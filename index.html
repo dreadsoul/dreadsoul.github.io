@@ -25,6 +25,10 @@ $.getJSON('data.json', function (data) {
             },
             zoomType: 'x'
         },
+	
+	credits: { 
+		'enabled': 'false' 
+	},
 
         rangeSelector: {
 
@@ -68,10 +72,7 @@ $.getJSON('data.json', function (data) {
         subtitle: {
             text: 'Built chart in ... by ...' // dummy text to reserve space for dynamic subtitle
         },
-	credits: { 
-		'enabled': 'false' 
-	},
-        series: [{
+	series: [{
             name: 'Temperature',
             data: data.data,
             pointStart: data.pointStart,
@@ -101,6 +102,9 @@ Highcharts.chart('container_1', {
             beta: 0
         }
     },
+    credits: { 
+		'enabled': 'false' 
+	},
     title: {
         text: 'Parameters of Decision Supper System, 2017'
     },
