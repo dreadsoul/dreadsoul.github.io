@@ -1,191 +1,219 @@
 <!DOCTYPE html>
 <html>
-	<head lang="en">
-		<meta charset="utf-8">
-		<title>Decision Support System for Energy</title>
 
-		<!--ADD libraries-->
-		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-		<script src="https://code.highcharts.com/stock/highstock.js"></script>
-		<script src="https://code.highcharts.com/highcharts-3d.js"></script>
-		<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+<head lang="en">
+	<meta charset="utf-8">
+	<title>Decision Support System for Energy</title>
 
-		<script type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js">
-    </script>
+	<!--ADD libraries-->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://code.highcharts.com/stock/highstock.js"></script>
+	<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+	<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
 
-		<!--Stylesheets-->
-    <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js">
+	</script>
 
-    <!-- Get some nice font-->
-    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">
+	<!--Stylesheets-->
+	<link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
 
-		<!--ADD own stylesheet-->
-		<link rel="stylesheet" type="text/css" href="css/mystyle.css">
-		<link href="css/toastr.css" rel="stylesheet" type="text/css"/>
+	<!-- Get some nice font-->
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">
 
-		<!--ADD own js-->
-		<script src="js/myscript"></script>
+	<!--ADD own stylesheet-->
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+	<link href="css/toastr.css" rel="stylesheet" type="text/css" />
 
-
-	</head>
+	<!--ADD own js-->
+	<script src="js/myscript"></script>
 
 
+</head>
 
-	<body>
-		<div class="container" style="text-align :center">
-			<div style="background-color: white; padding-bottom: 0px" class="navbar-fixed-top">
-				<h1>Decision Support System for Energy</h1>
 
-				<div class="row">
-					<p>The following visualization displays the process states and paratemer of DSS
-						| <a href="#" id="Read_me" data-toggle="modal" data-target="#readMeModal">Read me</a> |
-            <a href="https://youtube.com" target="_blank" id="Youtube_demo">Youtube</a></p>
 
-				</div>
+<body>
+	<div class="container" style="text-align :center">
+		<div style="background-color: white; padding-bottom: 0px" class="navbar-fixed-top">
+			<h1>Decision Support System for Energy</h1>
+
+			<div class="row">
+				<p>The following visualization displays the process states and paratemers of DSS | <a href="#" id="Read_me" data-toggle="modal" data-target="#readMeModal">Read me</a> |
+					<a href="https://youtube.com" target="_blank" id="Youtube_demo">Youtube</a></p>
 
 			</div>
+
+			<div class="modal fade" id="readMeModal">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title" id="myModalLabel">Instructions</h4>
+						</div>
+						<div class="modal-body" align="left">
+							Use the control bar to filter buildings and select energy type. <br> Select one building in the map or in the ranking chart. <br> Hover a label or chart title for more information.
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Single button -->
+			<div class="btn-group">
+			  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    Action <span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu">
+			    <li><a href="#">Action</a></li>
+			    <li><a href="#">Another action</a></li>
+			    <li><a href="#">Something else here</a></li>
+			    <li role="separator" class="divider"></li>
+			    <li><a href="#">Separated link</a></li>
+			  </ul>
+			</div>
+
 		</div>
-	</body>
+	</div>
+</body>
+
 </html>
 
 
 <div id="container" style="height: 400px; width: 800px; float: right">
 
 
-		<script type="text/javascript">
+	<script type="text/javascript">
+		$.getJSON('data/temperature.json', function(data) {
 
-$.getJSON('data/temperature.json', function (data) {
+			// Create a timer
+			var start = +new Date();
 
-    // Create a timer
-    var start = +new Date();
+			// Create the chart
+			Highcharts.stockChart('container', {
+				credits: {
+					enabled: false,
+				},
+				chart: {
+					events: {
+						load: function() {
+							this.setTitle(null, {
+								//text: 'Built chart in ' + (new Date() - start) + 'ms'
+							});
+						}
+					},
+					zoomType: 'x'
+				},
 
-    // Create the chart
-    Highcharts.stockChart('container', {
-		credits: {
-			enabled: false,
-		},
-        chart: {
-            events: {
-                load: function () {
-                    this.setTitle(null, {
-                        //text: 'Built chart in ' + (new Date() - start) + 'ms'
-                    });
-                }
-            },
-            zoomType: 'x'
-        },
+				rangeSelector: {
 
-        rangeSelector: {
+					buttons: [{
+						type: 'day',
+						count: 3,
+						text: '3d'
+					}, {
+						type: 'week',
+						count: 1,
+						text: '1w'
+					}, {
+						type: 'month',
+						count: 1,
+						text: '1m'
+					}, {
+						type: 'month',
+						count: 6,
+						text: '6m'
+					}, {
+						type: 'year',
+						count: 1,
+						text: '1y'
+					}, {
+						type: 'all',
+						text: 'All'
+					}],
+					selected: 3
+				},
 
-            buttons: [{
-                type: 'day',
-                count: 3,
-                text: '3d'
-            }, {
-                type: 'week',
-                count: 1,
-                text: '1w'
-            }, {
-                type: 'month',
-                count: 1,
-                text: '1m'
-            }, {
-                type: 'month',
-                count: 6,
-                text: '6m'
-            }, {
-                type: 'year',
-                count: 1,
-                text: '1y'
-            }, {
-                type: 'all',
-                text: 'All'
-            }],
-            selected: 3
-        },
+				yAxis: {
+					title: {
+						text: 'Temperature (°C)'
+					}
+				},
 
-        yAxis: {
-            title: {
-                text: 'Temperature (°C)'
-            }
-        },
+				title: {
+					text: 'Hourly temperatures in Region, city, 2009-2015'
+				},
 
-        title: {
-            text: 'Hourly temperatures in Region, city, 2009-2015'
-        },
+				subtitle: {
+					text: 'Built chart in ... by ...' // dummy text to reserve space for dynamic subtitle
+				},
 
-        subtitle: {
-            text: 'Built chart in ... by ...' // dummy text to reserve space for dynamic subtitle
-        },
+				series: [{
+					name: 'Temperature',
+					data: data.data,
+					pointStart: data.pointStart,
+					pointInterval: data.pointInterval,
+					tooltip: {
+						valueDecimals: 1,
+						valueSuffix: '°C'
+					}
+				}]
 
-        series: [{
-            name: 'Temperature',
-            data: data.data,
-            pointStart: data.pointStart,
-            pointInterval: data.pointInterval,
-            tooltip: {
-                valueDecimals: 1,
-                valueSuffix: '°C'
-            }
-        }]
-
-    });
-});
-
-		</script>
-		</div>
+			});
+		});
+	</script>
+</div>
 
 <div id="container_1" style="height: 400px; width: 800px"></div>
 
 
-		<script type="text/javascript">
-
-Highcharts.chart('container_1', {
-	credits: {
-		enabled: false
-	},
-    chart: {
-        type: 'pie',
-        options3d: {
-            enabled: true,
-            alpha: 45,
-            beta: 0
-        }
-    },
-    title: {
-        text: 'Decision Support Parameter Ratio, 2014'
-    },
-    tooltip: {
-        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-    },
-    plotOptions: {
-        pie: {
-            allowPointSelect: true,
-            cursor: 'pointer',
-            depth: 35,
-            dataLabels: {
-                enabled: true,
-                format: '{point.name}'
-            }
-        }
-    },
-    series: [{
-        type: 'pie',
-        name: 'Parameter ratio',
-        data: [
-            ['Forecast', 45.0],
-            ['ML Algorithm', 26.8],
-            {
-                name: 'Temperature',
-                y: 12.8,
-                sliced: true,
-                selected: true
-            },
-            ['Process States', 8.5],
-            ['Gas Demand', 6.2],
-            ['Others', 0.7]
-        ]
-    }]
-});
-		</script>
+<script type="text/javascript">
+	Highcharts.chart('container_1', {
+		credits: {
+			enabled: false
+		},
+		chart: {
+			type: 'pie',
+			options3d: {
+				enabled: true,
+				alpha: 45,
+				beta: 0
+			}
+		},
+		title: {
+			text: 'Decision Support Parameter Ratio, 2014'
+		},
+		tooltip: {
+			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		},
+		plotOptions: {
+			pie: {
+				allowPointSelect: true,
+				cursor: 'pointer',
+				depth: 35,
+				dataLabels: {
+					enabled: true,
+					format: '{point.name}'
+				}
+			}
+		},
+		series: [{
+			type: 'pie',
+			name: 'Parameter ratio',
+			data: [
+				['Forecast', 45.0],
+				['ML Algorithm', 26.8],
+				{
+					name: 'Temperature',
+					y: 12.8,
+					sliced: true,
+					selected: true
+				},
+				['Process States', 8.5],
+				['Gas Demand', 6.2],
+				['Others', 0.7]
+			]
+		}]
+	});
+</script>
