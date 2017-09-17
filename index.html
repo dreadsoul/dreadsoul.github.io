@@ -1,16 +1,47 @@
 <!DOCTYPE html>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="https://code.highcharts.com/stock/highstock.js"></script>
-<script src="https://code.highcharts.com/highcharts-3d.js"></script>
-<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+<html>
+	<head lang="en">
+		<meta charset="utf-8">
+		<title>Decision Support System for Energy</title>
+
+		<!--ADD libraries-->
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src="https://code.highcharts.com/stock/highstock.js"></script>
+		<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+		<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+
+		<script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js">
+    </script>
+
+		<!--Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
+
+    <!-- Get some nice font-->
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">
+
+		<!--ADD own stylesheet-->
+		<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+		<link href="css/toastr.css" rel="stylesheet" type="text/css"/> // snackbar or button styles
+
+		<!--ADD own js-->
+		<script src="js/myscript"></script>
+
+
+	</head>
+
+
+
+	<body>
+
+	</body>
+</html>
 
 <div id="container" style="height: 400px; width: 800px; float: right">
 
 
 		<script type="text/javascript">
 
-
-// $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=large-dataset.json&callback=?', function (data) {
 $.getJSON('data/temperature.json', function (data) {
 
     // Create a timer
