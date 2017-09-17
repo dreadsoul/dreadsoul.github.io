@@ -9,3 +9,11 @@ body {
 .row {
   align: center;
 }
+
+body.modal-open div.modal-backdrop {
+    z-index: 0;
+}
+
+/*#content {
+    background-color: rgb(122, 100, 123);
+}*/

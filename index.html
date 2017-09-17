@@ -38,12 +38,17 @@
 			<h1>Decision Support System for Energy</h1>
 
 			<div class="row">
-				<p>The following visualization displays the process states and paratemers of DSS | <a href="#" id="Read_me" data-toggle="modal" data-target="#readMeModal">Read me</a> |
-					<a href="https://youtube.com" target="_blank" id="Youtube_demo">Youtube</a> | <a href="https://github.com/dreadsoul/dreadsoul.github.io" target="_blank" id="Github_demo">GitHub Repo</a></p>
+				<p>The following visualization displays the process states and paratemers of DSS |
+					<a href="#" id="Read_me" data-toggle="modal" data-target="#readMeModal">Read me</a> |
+					<a href="#" id="disclaimer" data-toggle="modal" data-target="#disclaimerModal">Disclaimer</a> |
+					<a href="https://youtube.com" target="_blank" id="Youtube_demo">Youtube</a> |
+					<a href="https://github.com/dreadsoul/dreadsoul.github.io" target="_blank" id="Github_demo">GitHub Repo</a> |
+				</p>
 			</div>
-			<!-- Pup-up Information Window -->
-			<div class="modal fade" id="readMeModal">
+			<!-- Modal content Readme -->
+			<div class="modal fade" id="readMeModal" role="dialog">
 				<div class="modal-dialog">
+					<!-- modal content -->
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -58,6 +63,24 @@
 					</div>
 				</div>
 			</div>
+			<!-- Modal Disclaimer -->
+			<div class="modal fade" id="disclaimerModal" role="dialog">
+            <div class="modal-dialog">
+							<!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" >Disclaimer</h4>
+                    </div>
+                    <div class="modal-body" align="left">
+                        All the energy consumption and parameter are synthetic.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+       </div>
 			<!-- Navigation bar -->
 			<nav class="navbar navbar-inverse">
 				<div class="container-fluid">
@@ -68,12 +91,12 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a href="#" class="navbar-brand">DSS</a>
+						<a href="https://dreadsoul.github.io/" class="navbar-brand">DSS</a>
 					</div>
 					<!-- Menu item -->
 					<div>
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="#">Home</a></li>
+							<li class="active"><a href="https://dreadsoul.github.io/">Home</a></li>
 							<li><a href="#">About</a></li>
 							<li><a href="#">Contact</a></li>
 
@@ -92,136 +115,131 @@
 					</div>
 				</div>
 			</nav>
-
-
 		</div>
 	</div>
-</body>
 
-</html>
+	<div id="content" style="height: 800px; width:800">
+		<div>
+
+		<div id="container3" style="height: 400px; width: 600px">
 
 
-<div id="container" style="height: 400px; width: 800px; float: right">
+			<script type="text/javascript">
+			$.getJSON('data/temperature.json', function(data) {
 
+				// Create a timer
+				var start = +new Date();
 
-	<script type="text/javascript">
-		$.getJSON('data/temperature.json', function(data) {
+				// Create the chart
+				Highcharts.stockChart('container3', {
+					credits: {
+						enabled: false,
+					},
+					chart: {
+						events: {
+							load: function() {
+								this.setTitle(null, {
+									//text: 'Built chart in ' + (new Date() - start) + 'ms'
+								});
+							}
+						},
+						zoomType: 'x'
+					},
 
-			// Create a timer
-			var start = +new Date();
+					rangeSelector: {
 
-			// Create the chart
-			Highcharts.stockChart('container', {
-				credits: {
-					enabled: false,
-				},
-				chart: {
-					events: {
-						load: function() {
-							this.setTitle(null, {
-								//text: 'Built chart in ' + (new Date() - start) + 'ms'
-							});
+						buttons: [{
+							type: 'day',
+							count: 3,
+							text: '3d'
+						}, {
+							type: 'week',
+							count: 1,
+							text: '1w'
+						}, {
+							type: 'month',
+							count: 1,
+							text: '1m'
+						}, {
+							type: 'month',
+							count: 6,
+							text: '6m'
+						}, {
+							type: 'year',
+							count: 1,
+							text: '1y'
+						}, {
+							type: 'all',
+							text: 'All'
+						}],
+						selected: 3
+					},
+
+					yAxis: {
+						title: {
+							text: 'Temperature (°C)'
 						}
 					},
-					zoomType: 'x'
-				},
 
-				rangeSelector: {
-
-					buttons: [{
-						type: 'day',
-						count: 3,
-						text: '3d'
-					}, {
-						type: 'week',
-						count: 1,
-						text: '1w'
-					}, {
-						type: 'month',
-						count: 1,
-						text: '1m'
-					}, {
-						type: 'month',
-						count: 6,
-						text: '6m'
-					}, {
-						type: 'year',
-						count: 1,
-						text: '1y'
-					}, {
-						type: 'all',
-						text: 'All'
-					}],
-					selected: 3
-				},
-
-				yAxis: {
 					title: {
-						text: 'Temperature (°C)'
-					}
-				},
+						text: 'Hourly temperatures in Region, city, 2009-2015'
+					},
 
-				title: {
-					text: 'Hourly temperatures in Region, city, 2009-2015'
-				},
+					subtitle: {
+						text: 'Built chart in ... by ...' // dummy text to reserve space for dynamic subtitle
+					},
 
-				subtitle: {
-					text: 'Built chart in ... by ...' // dummy text to reserve space for dynamic subtitle
-				},
+					series: [{
+						name: 'Temperature',
+						data: data.data,
+						pointStart: data.pointStart,
+						pointInterval: data.pointInterval,
+						tooltip: {
+							valueDecimals: 1,
+							valueSuffix: '°C'
+						}
+					}]
 
-				series: [{
-					name: 'Temperature',
-					data: data.data,
-					pointStart: data.pointStart,
-					pointInterval: data.pointInterval,
-					tooltip: {
-						valueDecimals: 1,
-						valueSuffix: '°C'
-					}
-				}]
-
+				});
 			});
-		});
-	</script>
-</div>
+		</script>
+	</div>
 
-<div id="container_1" style="height: 400px; width: 800px"></div>
-
-
-<script type="text/javascript">
-	Highcharts.chart('container_1', {
-		credits: {
-			enabled: false
-		},
-		chart: {
-			type: 'pie',
-			options3d: {
-				enabled: true,
-				alpha: 45,
-				beta: 0
-			}
-		},
-		title: {
-			text: 'Decision Support Parameter Ratio, 2014'
-		},
-		tooltip: {
-			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-		},
-		plotOptions: {
-			pie: {
-				allowPointSelect: true,
-				cursor: 'pointer',
-				depth: 35,
-				dataLabels: {
+	<div id="container_1" style="height: 400px; width: 600px">
+	<script type="text/javascript">
+		Highcharts.chart('container_1', {
+			credits: {
+				enabled: false
+			},
+			chart: {
+				type: 'pie',
+				options3d: {
 					enabled: true,
-					format: '{point.name}'
+					alpha: 45,
+					beta: 0
 				}
-			}
-		},
-		series: [{
-			type: 'pie',
-			name: 'Parameter ratio',
-			data: [
+			},
+			title: {
+				text: 'Decision Support Parameter Ratio, 2014'
+			},
+			tooltip: {
+				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+			},
+			plotOptions: {
+				pie: {
+					allowPointSelect: true,
+					cursor: 'pointer',
+					depth: 35,
+					dataLabels: {
+						enabled: true,
+						format: '{point.name}'
+					}
+				}
+			},
+			series: [{
+				type: 'pie',
+				name: 'Parameter ratio',
+				data: [
 				['Forecast', 45.0],
 				['ML Algorithm', 26.8],
 				{
@@ -233,7 +251,14 @@
 				['Process States', 8.5],
 				['Gas Demand', 6.2],
 				['Others', 0.7]
-			]
-		}]
-	});
-</script>
+				]
+			}]
+		});
+	</script>
+</div>
+</div>
+</div>
+
+</body>
+
+</html>
