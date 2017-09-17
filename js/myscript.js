@@ -1,3 +1,5 @@
-var a = 1;
-b = a + 2;
-  
+// myscript.js
+
+$ (function() {
+  alert("Whats up!?");
+});

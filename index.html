@@ -6,16 +6,17 @@
 	<title>Decision Support System for Energy</title>
 
 	<!--ADD libraries-->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="https://code.highcharts.com/stock/highstock.js"></script>
 	<script src="https://code.highcharts.com/highcharts-3d.js"></script>
 	<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
 
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js">
-	</script>
+	<script src="libs/jquery/jquery-3.2.1.js" charset="utf-8"></script>
+	<script src="libs/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 
 	<!--Stylesheets-->
 	<link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.css"> -->
 
 	<!-- Get some nice font-->
 	<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">
@@ -27,10 +28,7 @@
 	<!--ADD own js-->
 	<script src="js/myscript"></script>
 
-
 </head>
-
-
 
 <body>
 	<div class="container" style="text-align :center">
@@ -51,7 +49,7 @@
 							<h4 class="modal-title" id="myModalLabel">Instructions</h4>
 						</div>
 						<div class="modal-body" align="left">
-							Use the control bar to filter buildings and select energy type. <br> Select one building in the map or in the ranking chart. <br> Hover a label or chart title for more information.
+							Use the control gadgets and parameter states to observe and evaluate network states. <br> xxx. <br> xxx.
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
@@ -59,20 +57,41 @@
 					</div>
 				</div>
 			</div>
+			<!-- Navigation bar -->
+			<nav class="navbar navbar-inverse">
+				<div class="container-fluid">
+					<!-- Logo -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a href="#" class="navbar-brand">DSS</a>
+					</div>
+					<!-- Menu item -->
+					<div>
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Contact</a></li>
 
-			<!-- Single button -->
-			<div class="btn-group">
-			  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			    Action <span class="caret"></span>
-			  </button>
-			  <ul class="dropdown-menu">
-			    <li><a href="#">Action</a></li>
-			    <li><a href="#">Another action</a></li>
-			    <li><a href="#">Something else here</a></li>
-			    <li role="separator" class="divider"></li>
-			    <li><a href="#">Separated link</a></li>
-			  </ul>
-			</div>
+							<!-- Drop down menu -->
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">My Profile <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Another action</a></li>
+									<li><a href="#">Something else here</a></li>
+									<li role="separator" class="divider"></li>
+									<li><a href="#">Separated link</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+
 
 		</div>
 	</div>
