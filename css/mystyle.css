@@ -8,17 +8,10 @@ body {
   padding-bottom: 0px;
 }
 
-<<<<<<< HEAD
 /*border to see the layout*/
 div{
   border: 1px dotted red;
 }
-=======
-=======
->>>>>>> dd6df3227d5cec8df837409bcb31fdd4ef4d466b
-/*div{
-  border: 1px dotted black;
-}*/
 
 .row {
   align: center;
@@ -29,6 +22,7 @@ body.modal-open div.modal-backdrop {
     z-index: 0;
 }
 
+/*Contents background to see the changes in content*/
 /*#content {
     background-color: rgb(122, 100, 123);
 }*/
