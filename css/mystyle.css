@@ -9,9 +9,9 @@ body {
 }
 
 /*border to see the layout*/
-/*div{
+div{
   border: 1px dotted red;
-}*/
+}
 
 .row {
   align: center;
