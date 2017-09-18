@@ -7,9 +7,10 @@ body {
   padding-top: 165px;
   padding-bottom: 0px;
 }
-div{
-  border: 0px dotted black;
-}
+
+/*div{
+  border: 1px dotted black;
+}*/
 
 .row {
   align: center;
