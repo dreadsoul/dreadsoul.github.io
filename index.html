@@ -30,297 +30,313 @@
 	<script src="js/myscript"></script>
 
 	<!--ADD icon-->
-	<link rel="icon" type="image/png" href="img/dashboard-chart.png"/>
+	<link rel="icon" type="image/png" href="img/dashboard-chart.png" />
 
 </head>
 
 <body>
-	<!-- Upper DIV Container -->
-	<div class="container" style="text-align :center">
-		<div style="background-color: white; padding-bottom: 0px" class="navbar-fixed-top">
-			<h1>Decision Support System for Energy</h1>
-
-			<div class="row">
-				<p>The following visualization displays the process states and paratemers of DSS |
-					<a href="#" id="Read_me" data-toggle="modal" data-target="#readMeModal">Read me</a> |
-					<a href="#" id="disclaimer" data-toggle="modal" data-target="#disclaimerModal">Disclaimer</a> |
-					<a href="https://youtube.com" target="_blank" id="Youtube_demo">Youtube</a> |
-					<a href="https://github.com/dreadsoul/dreadsoul.github.io" target="_blank" id="Github_demo">GitHub Repo</a> |
-				</p>
-			</div>
-			<!-- Modal content Readme -->
-			<div class="modal fade" id="readMeModal" role="dialog">
-				<div class="modal-dialog">
-					<!-- modal content -->
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							<h4 class="modal-title" id="myModalLabel">Instructions</h4>
-						</div>
-						<div class="modal-body" align="left">
-							Use the control gadgets and parameter states to observe and evaluate Network States. <br> xxx. <br> xxx.
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+	<div class="container">
+		<div class="navbar-fixed-top">
+			<!-- DSS Title Container fixed -->
+			<div class="container" style="text-align :center">
+				<div style="background-color: white; padding-bottom: 0px">
+					<h1>Decision Support System for Energy</h1>
+					<!-- Disclaimer Row -->
+					<div class="row">
+						<p>The following visualization displays the process states and paratemers of DSS |
+							<a href="#" id="Read_me" data-toggle="modal" data-target="#readMeModal">Read me</a> |
+							<a href="#" id="disclaimer" data-toggle="modal" data-target="#disclaimerModal">Disclaimer</a> |
+							<a href="https://youtube.com" target="_blank" id="Youtube_demo">Youtube</a> |
+							<a href="https://github.com/dreadsoul/dreadsoul.github.io" target="_blank" id="Github_demo">GitHub Repo</a> |
+						</p>
+					</div>
+					<!-- Modal content Readme -->
+					<div class="modal fade" id="readMeModal" role="dialog">
+						<div class="modal-dialog">
+							<!-- modal content -->
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									<h4 class="modal-title" id="myModalLabel">Instructions</h4>
+								</div>
+								<div class="modal-body" align="left">
+									Use the control gadgets and parameter states to observe and evaluate Network States. <br> xxx. <br> xxx.
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-			<!-- Modal Disclaimer -->
-			<div class="modal fade" id="disclaimerModal" role="dialog">
-            <div class="modal-dialog">
+					<!-- Modal Disclaimer -->
+					<div class="modal fade" id="disclaimerModal" role="dialog">
+						<div class="modal-dialog">
 							<!-- Modal content -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" >Disclaimer</h4>
-                    </div>
-                    <div class="modal-body" align="left">
-                        All the energy consumption and parameter are synthetic.
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-       </div>
-			<!-- Navigation bar -->
-			<nav class="navbar navbar-inverse">
-				<div class="container-fluid">
-					<!-- Logo -->
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a href="https://dreadsoul.github.io/" class="navbar-brand">DSS</a>
-					</div>
-					<!-- Menu item -->
-					<div>
-						<ul class="nav navbar-nav">
-							<li class="active"><a href="https://dreadsoul.github.io/">Home</a></li>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Contact</a></li>
-
-							<!-- Drop down menu -->
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">My Profile <span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Action</a></li>
-									<li><a href="#">Another action</a></li>
-									<li><a href="#">Something else here</a></li>
-									<li role="separator" class="divider"></li>
-									<li><a href="#">Separated link</a></li>
-								</ul>
-							</li>
-						</ul>
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									<h4 class="modal-title">Disclaimer</h4>
+								</div>
+								<div class="modal-body" align="left">
+									All the energy consumption and parameter are synthetic.
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</nav>
+			</div>
+			<!-- Container of Navbar -->
+			<!-- Navigation Row -->
+			<div class="row"  id="navigation">
+				<div class="container">
+					<!-- Navigation bar -->
+					<nav class="navbar navbar-inverse">
+						<div class="container-fluid">
+							<!-- Logo -->
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<a href="https://dreadsoul.github.io/" class="navbar-brand">DSS</a>
+							</div>
+							<!-- Menu item -->
+							<div>
+								<ul class="nav navbar-nav">
+									<li class="active"><a href="https://dreadsoul.github.io/">Home</a></li>
+									<li><a href="#">About</a></li>
+									<li><a href="#">Contact</a></li>
+
+									<!-- Drop down menu -->
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">My Profile <span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">Action</a></li>
+											<li><a href="#">Another action</a></li>
+											<li><a href="#">Something else here</a></li>
+											<li role="separator" class="divider"></li>
+											<li><a href="#">Separated link</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!--Container of Content  -->
+	<div class="container">
+		<!-- Time Series Chart -->
+		<div id="container">
+			<script type="text/javascript">
+				$.getJSON('data/temperature.json', function(data) {
+
+					// Create a timer
+					var start = +new Date();
+
+					// Create the chart
+					Highcharts.stockChart('container', {
+						credits: {
+							enabled: false,
+						},
+						chart: {
+							events: {
+								load: function() {
+									this.setTitle(null, {
+										//text: 'Built chart in ' + (new Date() - start) + 'ms'
+									});
+								}
+							},
+							zoomType: 'x'
+						},
+
+						rangeSelector: {
+
+							buttons: [{
+								type: 'day',
+								count: 3,
+								text: '3d'
+							}, {
+								type: 'week',
+								count: 1,
+								text: '1w'
+							}, {
+								type: 'month',
+								count: 1,
+								text: '1m'
+							}, {
+								type: 'month',
+								count: 6,
+								text: '6m'
+							}, {
+								type: 'year',
+								count: 1,
+								text: '1y'
+							}, {
+								type: 'all',
+								text: 'All'
+							}],
+							selected: 3
+						},
+
+						yAxis: {
+							title: {
+								text: 'Temperature (°C)'
+							}
+						},
+
+						title: {
+							text: 'Hourly temperatures in Region, city, 2009-2015'
+						},
+
+						subtitle: {
+							text: 'Built chart in ... by ...' // dummy text to reserve space for dynamic subtitle
+						},
+
+						series: [{
+							name: 'Temperature',
+							data: data.data,
+							pointStart: data.pointStart,
+							pointInterval: data.pointInterval,
+							tooltip: {
+								valueDecimals: 1,
+								valueSuffix: '°C'
+							}
+						}]
+
+					});
+				});
+			</script>
+		</div>
+		<!-- 3D Piechart -->
+		<div id="container_1">
+			<script type="text/javascript">
+				Highcharts.chart('container_1', {
+					credits: {
+						enabled: false
+					},
+					chart: {
+						type: 'pie',
+						options3d: {
+							enabled: true,
+							alpha: 45,
+							beta: 0
+						}
+					},
+					title: {
+						text: 'Decision Support Parameter Ratio, 2014'
+					},
+					tooltip: {
+						pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+					},
+					plotOptions: {
+						pie: {
+							allowPointSelect: true,
+							cursor: 'pointer',
+							depth: 35,
+							dataLabels: {
+								enabled: true,
+								format: '{point.name}'
+							}
+						}
+					},
+					series: [{
+						type: 'pie',
+						name: 'Parameter ratio',
+						data: [
+							['Forecast', 45.0],
+							['ML Algorithm', 26.8],
+							{
+								name: 'Temperature',
+								y: 12.8,
+								sliced: true,
+								selected: true
+							},
+							['Process States', 8.5],
+							['Gas Demand', 6.2],
+							['Others', 0.7]
+						]
+					}]
+				});
+			</script>
+
 		</div>
 	</div>
 
-	<div id="content" style="height: 800px; width:800">
+	<link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+	<!--footer start from here-->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-6 footerleft ">
+					<div class="logofooter"> DS Logo</div>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+					<p><i class="fa fa-map-pin"></i> 210, Name of Tower, Avenue sec 9, New City -        112358, PANDORA</p>
+					<p><i class="fa fa-phone"></i> Phone (PANDORA) : +00 9999 888 777</p>
+					<p><i class="fa fa-envelope"></i> E-mail : dreadsoul@mail.ru</p>
 
-		<div id="container3" style="height: 400px; width: 600px">
-
-
-			<script type="text/javascript">
-			$.getJSON('data/temperature.json', function(data) {
-
-				// Create a timer
-				var start = +new Date();
-
-				// Create the chart
-				Highcharts.stockChart('container3', {
-					credits: {
-						enabled: false,
-					},
-					chart: {
-						events: {
-							load: function() {
-								this.setTitle(null, {
-									//text: 'Built chart in ' + (new Date() - start) + 'ms'
-								});
-							}
-						},
-						zoomType: 'x'
-					},
-
-					rangeSelector: {
-
-						buttons: [{
-							type: 'day',
-							count: 3,
-							text: '3d'
-						}, {
-							type: 'week',
-							count: 1,
-							text: '1w'
-						}, {
-							type: 'month',
-							count: 1,
-							text: '1m'
-						}, {
-							type: 'month',
-							count: 6,
-							text: '6m'
-						}, {
-							type: 'year',
-							count: 1,
-							text: '1y'
-						}, {
-							type: 'all',
-							text: 'All'
-						}],
-						selected: 3
-					},
-
-					yAxis: {
-						title: {
-							text: 'Temperature (°C)'
-						}
-					},
-
-					title: {
-						text: 'Hourly temperatures in Region, city, 2009-2015'
-					},
-
-					subtitle: {
-						text: 'Built chart in ... by ...' // dummy text to reserve space for dynamic subtitle
-					},
-
-					series: [{
-						name: 'Temperature',
-						data: data.data,
-						pointStart: data.pointStart,
-						pointInterval: data.pointInterval,
-						tooltip: {
-							valueDecimals: 1,
-							valueSuffix: '°C'
-						}
-					}]
-
-				});
-			});
-		</script>
+				</div>
+				<div class="col-md-2 col-sm-6 paddingtop-bottom">
+					<h6 class="heading7">GENERAL LINKS</h6>
+					<ul class="footer-ul">
+						<li><a href="#"> Career</a></li>
+						<li><a href="#"> Privacy Policy</a></li>
+						<li><a href="#"> Terms & Conditions</a></li>
+						<li><a href="#"> Client Gateway</a></li>
+						<li><a href="#"> Ranking</a></li>
+						<li><a href="#"> Case Studies</a></li>
+						<li><a href="#"> Frequently Ask Questions</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 col-sm-6 paddingtop-bottom">
+					<h6 class="heading7">LATEST POST</h6>
+					<div class="post">
+						<p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
+						<p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
+						<p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 paddingtop-bottom">
+					<div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+						<div class="fb-xfbml-parse-ignore">
+							<blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/facebook">Social Network</a></blockquote>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--footer start from here-->
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container">
+			<div class="col-md-6">
+				<p>© 2017 - All Rights with DS</p>
+			</div>
+			<div class="col-md-6">
+				<ul class="bottom_ul">
+					<li><a href="#">dreadsoul.github.io</a></li>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">My Profile</a></li>
+					<li><a href="#">Site Map</a></li>
+				</ul>
+			</div>
+		</div>
 	</div>
 
-	<div id="container_1" style="height: 400px; width: 600px">
-	<script type="text/javascript">
-		Highcharts.chart('container_1', {
-			credits: {
-				enabled: false
-			},
-			chart: {
-				type: 'pie',
-				options3d: {
-					enabled: true,
-					alpha: 45,
-					beta: 0
-				}
-			},
-			title: {
-				text: 'Decision Support Parameter Ratio, 2014'
-			},
-			tooltip: {
-				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-			},
-			plotOptions: {
-				pie: {
-					allowPointSelect: true,
-					cursor: 'pointer',
-					depth: 35,
-					dataLabels: {
-						enabled: true,
-						format: '{point.name}'
-					}
-				}
-			},
-			series: [{
-				type: 'pie',
-				name: 'Parameter ratio',
-				data: [
-				['Forecast', 45.0],
-				['ML Algorithm', 26.8],
-				{
-					name: 'Temperature',
-					y: 12.8,
-					sliced: true,
-					selected: true
-				},
-				['Process States', 8.5],
-				['Gas Demand', 6.2],
-				['Others', 0.7]
-				]
-			}]
-		});
-	</script>
-</div>
-</div>
-
-<link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
-<!--footer start from here-->
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 col-sm-6 footerleft ">
-        <div class="logofooter"> DS Logo</div>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
-        <p><i class="fa fa-map-pin"></i> 210, Name of Tower, Avenue sec 9, New City -        112358, PANDORA</p>
-        <p><i class="fa fa-phone"></i> Phone (PANDORA) : +00 9999 888 777</p>
-        <p><i class="fa fa-envelope"></i> E-mail : dreadsoul@mail.ru</p>
-
-      </div>
-      <div class="col-md-2 col-sm-6 paddingtop-bottom">
-        <h6 class="heading7">GENERAL LINKS</h6>
-        <ul class="footer-ul">
-          <li><a href="#"> Career</a></li>
-          <li><a href="#"> Privacy Policy</a></li>
-          <li><a href="#"> Terms & Conditions</a></li>
-          <li><a href="#"> Client Gateway</a></li>
-          <li><a href="#"> Ranking</a></li>
-          <li><a href="#"> Case Studies</a></li>
-          <li><a href="#"> Frequently Ask Questions</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3 col-sm-6 paddingtop-bottom">
-        <h6 class="heading7">LATEST POST</h6>
-        <div class="post">
-          <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
-          <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
-          <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6 paddingtop-bottom">
-        <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-          <div class="fb-xfbml-parse-ignore">
-            <blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-<!--footer start from here-->
-
-<div class="copyright">
-  <div class="container">
-    <div class="col-md-6">
-      <p>© 2017 - All Rights with DS</p>
-    </div>
-    <div class="col-md-6">
-      <ul class="bottom_ul">
-        <li><a href="#">dreadsoul.github.io</a></li>
-				<li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-				<li><a href="#">My Profile</a></li>
-        <li><a href="#">Site Map</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
 </body>
+
 </html>
