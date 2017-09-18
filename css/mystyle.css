@@ -7,14 +7,21 @@ body {
   padding-top: 165px;
   padding-bottom: 0px;
 }
+
+/*border to see the layout*/
 div{
-  border: 1px dotted black;
+  border: 1px dotted red;
 }
+=======
+/*div{
+  border: 1px dotted black;
+}*/
 
 .row {
   align: center;
 }
 
+/*to make the modal be closed*/
 body.modal-open div.modal-backdrop {
     z-index: 0;
 }
