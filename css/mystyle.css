@@ -75,14 +75,3 @@ footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', s
  .bottom_ul li:after { content:"/"; color:#FFF; margin-right:8px; margin-left:8px;}
  .bottom_ul li a { color:#FFF;  font-size:12px;}
 /*footer style end*/
-
-
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('libs/bootstrap/fonts/font-awesome.min.css');
-  src: url('libs/bootstrap/fonts/font-awesome.min.css') format('embedded-opentype'),
-    url('libs/bootstrap/fonts/font-awesome.min.css') format('woff'),
-    url('libs/bootstrap/fonts/font-awesome.min.css') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
