@@ -33,7 +33,7 @@
 	<link href="css/toastr.css" rel="stylesheet" type="text/css" />
 
 	<!--ADD own js-->
-	<script src="js/myscript"></script>
+	<script type="text/javascript" src="js/myscript.js"></script>
 
 	<!--ADD icon-->
 	<link rel="icon" type="image/png" href="img/dashboard-chart.png" />
@@ -41,7 +41,6 @@
 	<!-- font-awesome -->
 	<link href="libs/bootstrap/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
-
 
 </head>
 
@@ -55,11 +54,10 @@
 					<!-- Disclaimer Row -->
 					<div class="row">
 						<p>The following visualization displays the process states and paratemers of DSS |
-							<a href="#" id="Read_me" data-toggle="modal" data-target="#readMeModal">Read me</a> |
-							<a href="#" id="disclaimer" data-toggle="modal" data-target="#disclaimerModal">Disclaimer</a> |
-							<a href="https://youtube.com" target="_blank" id="Youtube_demo">Youtube</a> |
-							<a href="https://github.com/dreadsoul/dreadsoul.github.io" target="_blank" id="Github_demo">GitHub Repo</a> |
-							<a href="https://github.com/dreadsoul/dreadsoul.github.io" target="_blank" class="btn btn-social-icon btn-github"><span class="fa fa-github"></span></a>
+							<a href="#" id="Read_me" data-toggle="modal" data-target="#readMeModal">Read me <i class="fa fa-info"></i></a> |
+							<a href="#" id="disclaimer" data-toggle="modal" data-target="#disclaimerModal">Disclaimer <i class="fa fa-exclamation-triangle"></i></a> |
+							<a href="https://youtube.com" target="_blank" id="Youtube_demo">Youtube <i class="fa fa-youtube"></i></a> |
+							<a href="https://github.com/dreadsoul/dreadsoul.github.io" target="_blank" data-toggle="tooltip" title="GitHub Repo"><i class="fa fa-github"></i></a> |
 						</p>
 					</div>
 					<!-- Modal content Readme -->
@@ -114,7 +112,7 @@
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
 								</button>
-								<a href="https://dreadsoul.github.io/" class="navbar-brand">DSS</a>
+								<a href="https://dreadsoul.github.io/" class="navbar-brand"><i class="fa fa-pie-chart" aria-hidden="true"></i> DSS</a>
 							</div>
 							<!-- Menu item -->
 							<div>

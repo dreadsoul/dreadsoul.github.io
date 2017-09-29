@@ -1,5 +1,4 @@
-// myscript.js
-
-$ (function() {
-  alert("Whats up!?");
+// jQuery tooltip form
+$(function(){
+    $('[data-toggle="tooltip"]').tooltip();
 });
