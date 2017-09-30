@@ -45,18 +45,24 @@
 </head>
 
 <body>
-	<div class="container">
+	<div class="container" id="main">
 		<div class="navbar-fixed-top">
 			<!-- DSS Title Container fixed -->
 			<div style="background-color: white">
 				<div class="container" style="text-align :center">
-					<h1 class="text animated slideInDown">Decision Support System for Energy</h1>
+					<h1 class="text animated slideInDown">Decision Support System for Gas-Dispatching</h1>
 					<!-- Disclaimer Row -->
 					<div class="row">
 						<p>The following visualization displays the process states and paratemers of DSS |
-							<a href="#" id="Read_me" data-toggle="modal" data-target="#readMeModal">Read me <i class="fa fa-info"></i></a> |
-							<a href="#" id="disclaimer" data-toggle="modal" data-target="#disclaimerModal">Disclaimer <i class="fa fa-exclamation-triangle"></i></a> |
-							<a href="https://youtube.com" target="_blank" id="Youtube_demo">Youtube <i class="fa fa-youtube"></i></a> |
+							<a href="#" id="Read_me" data-toggle="modal" data-target="#readMeModal">Read me</a> |
+							<a href="#" id="disclaimer" data-toggle="modal" data-target="#disclaimerModal">Disclaimer</a> |
+							<a href="https://youtube.com" target="_blank" id="Youtube_demo">Youtube</a> |
+							<a href="https://github.com/dreadsoul/dreadsoul.github.io" target="_blank" data-toggle="tooltip" title="GitHub Repo"> GitHub</a> |
+							<!-- or as icon -->
+							 <font color="red"> or</font> |
+							<a href="#"><i class="fa fa-info"></i></a> |
+							<a href="#"><i class="fa fa-exclamation-triangle"></i></a> |
+							<a href="https://youtube.com" target="_blank"><i class="fa fa-youtube"></i></a> |
 							<a href="https://github.com/dreadsoul/dreadsoul.github.io" target="_blank" data-toggle="tooltip" title="GitHub Repo"><i class="fa fa-github"></i></a> |
 						</p>
 					</div>
@@ -141,155 +147,165 @@
 
 			</div>
 
-		</div>
+		</div> <!-- end navbar -->
+
+
+					<div class="row" id="moreInfo">
+						<div class="col-sm-6">
+							<h3>Neat Tabbable Content</h3>
+							<div class="tabbable">
+								<ul class="nav nav-tabs">
+									<li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+									<li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+									<li><a href="#tab3" data-toggle="tab">Section 3</a></li>
+									<li><a href="#tab4" data-toggle="tab">Section 4</a></li>
+								</ul>
+								<div class="tab-content">
+									<div class="tab-pane active" id="tab1">
+										<h4><span class="glyphicon glyphicon-map-marker"></span> Our Location <small>More like our favourite surf spot</small></h4>
+
+										<iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=waikiki+beach&amp;aq=&amp;sll=19.896766,-155.582782&amp;sspn=8.711424,11.854248&amp;ie=UTF8&amp;hq=&amp;hnear=Waikiki+Beach,+Honolulu,+Hawaii,+United+States&amp;t=m&amp;ll=21.277298,-157.8265&amp;spn=0.015996,0.036478&amp;z=14&amp;output=embed"></iframe>
+
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									</div><!-- end tab-pane -->
+
+									<div class="tab-pane" id="tab3">
+										<!-- <h4><span class="glyphicon glyphicon-map-marker"></span> Our Location <small>More like our favourite surf spot</small></h4> -->
+
+										<!-- Time Series Temperature Chart -->
+										<p id="container_temerature"></p>
+
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+									</div><!-- end tab-pane -->
+
+									<div class="tab-pane" id="tab4">
+										<!-- <h4><span class="glyphicon glyphicon-map-marker"></span> Our Location <small>More like our favourite surf spot</small></h4> -->
+
+										<!-- Time Series Temperature Chart -->
+										<p id="container_1"></p>
+
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+									</div><!-- end tab-pane -->
+
+									<div class="tab-pane" id="tab2">
+										<h4>A Left Floated Picture <small>Using Placehold.it</small></h4>
+
+										<img src="http://placehold.it/140" class="thumbnail pull-left" alt="Placeholder image">
+
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+										<hr>
+
+										<a href="#myModal" role="button" class="btn btn-warning" data-toggle="modal"><span class="glyphicon glyphicon-hand-up"></span> Click for a Modal Window!</a>
+
+										<div class="modal fade" id="myModal">
+											<div class="modal-dialog">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button class="close" data-dismiss="modal">&times;</button>
+
+														<h4 class="modal-title">A Modal Window</h4>
+													</div><!-- end modal-header -->
+													<div class="modal-body">
+														<h4>Text in a modal</h4>
+
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+														<h4>Popovers in a modal</h4>
+														<a href="#" class="btn btn-danger pop" data-toggle="popover" data-placement="top" data-original-title="You clicked it!" data-content="I knew you would.">Don't click this button</a>
+
+														<h4>Tooltips in a modal</h4>
+														<a href="" data-original-title="Tooltip" rel="tooltip">This link</a> should have a tooltip, and so should <a href="#" data-original-title="Woohoo!" rel="tooltip">this one</a>!
+
+														<hr>
+
+														<p><small class="text-muted">PS. This form doesn't do anything. Just a heads up.</small></p>
+
+														<form class="form-horizontal">
+															<div class="form-group">
+																<label class="col-lg-2 control-label" for="inputName">Name</label>
+																<div class="col-lg-10">
+																	<input class="form-control" id="inputName" placeholder="Name" type="text">
+																</div>
+															</div>
+
+															<div class="form-group">
+																<label class="col-lg-2 control-label" for="inputEmail">Email</label>
+																<div class="col-lg-10">
+																	<input class="form-control" id="inputEmail" placeholder="Email" type="email">
+																</div>
+															</div>
+
+															<div class="form-group">
+																<label class="col-lg-2 control-label" for="inputMessage">Message</label>
+																<div class="col-lg-10">
+																	<textarea class="form-control" id="inputMessage" placeholder="Message" rows="3"></textarea>
+																	<button class="btn btn-success pull-right" type="submit">Send!</button>
+																</div>
+															</div>
+														</form>
+													</div><!-- end modal-body -->
+
+													<div class="modal-footer">
+														<button class="btn btn-default" data-dismiss="modal" type="button">Close</button> <button class="btn btn-primary" type="button">Save changes</button>
+													</div><!-- end modal-footer -->
+												</div><!-- end modal-content -->
+											</div><!-- end modal-dialog -->
+										</div><!-- end myModal -->
+
+									</div><!-- end tab-pane -->
+								</div><!-- end tab-content -->
+							</div><!-- end tabbable -->
+						</div><!-- end col-sm-6 -->
+
+						<div class="col-sm-6">
+							<h3>Some Text Info</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+							<h4>A List Group</h4>
+
+							<div class="list-group">
+								<a href="#" class="list-group-item">
+									<h4 class="list-group-item-heading">Kale</h4>
+									<p class="list-group-item-text">Kale or borecole is a vegetable with green or purple leaves, in which the central leaves do not form a head.</p>
+								</a>
+								<a href="#" class="list-group-item">
+									<h4 class="list-group-item-heading">Carrots</h4>
+									<p class="list-group-item-text">The carrot is a root vegetable, usually orange in colour, though purple, red, white, and yellow varieties exist. It has a crisp texture when fresh.</p>
+								</a>
+								<a href="#" class="list-group-item">
+									<h4 class="list-group-item-heading">Steel-cut oats</h4>
+									<p class="list-group-item-text">Steel-cut oats are whole grain groats which have been cut into pieces. They are commonly used in Scotland and Ireland to make porridge.</p>
+								</a>
+							</div><!-- list-group -->
+
+							<h5>A small heading</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div><!-- end col-sm-6 -->
+					</div><!-- end moreInfo -->
+
+
+
+
+
 
 	</div>
 
-	<!--Container of Content  -->
-	<div class="container">
-		<!-- Time Series Chart -->
-		<div id="container">
-			<script type="text/javascript">
-				$.getJSON('data/temperature.json', function(data) {
 
-					// Create a timer
-					var start = +new Date();
 
-					// Create the chart
-					Highcharts.stockChart('container', {
-						credits: {
-							enabled: false,
-						},
-						chart: {
-							events: {
-								load: function() {
-									this.setTitle(null, {
-										//text: 'Built chart in ' + (new Date() - start) + 'ms'
-									});
-								}
-							},
-							zoomType: 'x'
-						},
-
-						rangeSelector: {
-
-							buttons: [{
-								type: 'day',
-								count: 3,
-								text: '3d'
-							}, {
-								type: 'week',
-								count: 1,
-								text: '1w'
-							}, {
-								type: 'month',
-								count: 1,
-								text: '1m'
-							}, {
-								type: 'month',
-								count: 6,
-								text: '6m'
-							}, {
-								type: 'year',
-								count: 1,
-								text: '1y'
-							}, {
-								type: 'all',
-								text: 'All'
-							}],
-							selected: 3
-						},
-
-						yAxis: {
-							title: {
-								text: 'Temperature (°C)'
-							}
-						},
-
-						title: {
-							text: 'Hourly temperatures in Region, city, 2009-2015'
-						},
-
-						subtitle: {
-							text: 'Built chart in ... by ...' // dummy text to reserve space for dynamic subtitle
-						},
-
-						series: [{
-							name: 'Temperature',
-							data: data.data,
-							pointStart: data.pointStart,
-							pointInterval: data.pointInterval,
-							tooltip: {
-								valueDecimals: 1,
-								valueSuffix: '°C'
-							}
-						}]
-
-					});
-				});
-			</script>
-		</div>
-		<!-- 3D Piechart -->
-		<div id="container_1">
-			<script type="text/javascript">
-				Highcharts.chart('container_1', {
-					credits: {
-						enabled: false
-					},
-					chart: {
-						type: 'pie',
-						options3d: {
-							enabled: true,
-							alpha: 45,
-							beta: 0
-						}
-					},
-					title: {
-						text: 'Decision Support Parameter Ratio, 2014'
-					},
-					tooltip: {
-						pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-					},
-					plotOptions: {
-						pie: {
-							allowPointSelect: true,
-							cursor: 'pointer',
-							depth: 35,
-							dataLabels: {
-								enabled: true,
-								format: '{point.name}'
-							}
-						}
-					},
-					series: [{
-						type: 'pie',
-						name: 'Parameter ratio',
-						data: [
-							['Forecast', 45.0],
-							['ML Algorithm', 26.8],
-							{
-								name: 'Temperature',
-								y: 12.8,
-								sliced: true,
-								selected: true
-							},
-							['Process States', 8.5],
-							['Gas Demand', 6.2],
-							['Others', 0.7]
-						]
-					}]
-				});
-			</script>
-
-		</div>
-	</div>
 
 	<!--footer start from here-->
 	<footer>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 col-sm-6 footerleft ">
-					<div class="logofooter"> DS Logo</div>
+					<div class="logofooter"><i class="fa fa-pie-chart" aria-hidden="true"></i> DSS Logo</div>
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
 					<p><i class="fa fa-map-pin"></i> 210, Name of Tower, Avenue sec 9, New City - <br> 112358, PANDORA</p>
 					<p><i class="fa fa-phone"></i> Phone (PANDORA) : +00 9999 888 777</p>
